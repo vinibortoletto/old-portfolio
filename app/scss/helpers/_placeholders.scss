@@ -1,0 +1,26 @@
+%grid-center {
+  display: grid;
+  justify-items: center;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+%transition {
+  transition: 0.2s ease-out;
+}
+
+%side-padding {
+  padding-right: 5vw;
+  padding-left: 5vw;
+}

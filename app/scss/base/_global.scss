@@ -1,0 +1,40 @@
+body {
+  background: $c-black;
+}
+
+a {
+  color: $c-white;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100vh;
+
+  @extend %absolute;
+
+  background: $c-black url(/dist/images/bg-md.jpg) center / cover;
+}
+
+.page-active .icon {
+  color: teal;
+}
+
+// .title {
+//   font-family: "Anton", sans-serif;
+//   color: $c-white;
+//   font-size: $f-md;
+//   text-transform: uppercase;
+// }
+
+// .subtitle {
+//   font-family: "Romanesco", cursive;
+//   font-size: $f-md;
+
+//   background: linear-gradient(to left, #30cfd0 50%, #330867);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
+
+.bg-img {
+  background: $c-black url(/dist/images/bg-lg.jpg) center / cover;
+}

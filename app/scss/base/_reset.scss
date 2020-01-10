@@ -452,8 +452,16 @@ html {
   font-size: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+figure {
+  margin: 0;
 }

@@ -16,6 +16,9 @@
   padding: $d-mini;
   position: relative;
 
+  opacity: 0;
+  transform: translateY(-10px);
+
   .icon {
     font-size: 1.5rem;
   }
@@ -40,12 +43,20 @@
 }
 
 .page-active {
-  .icon {
-    color: $c-teal;
-  }
   .square {
-    opacity: 1;
+    opacity: 0;
+    @include animation(pageActiveIcon, 1s);
   }
+}
+
+.nav-item-1 {
+  @include animation(navIcons, 0.2s);
+}
+.nav-item-2 {
+  @include animation(navIcons, 0.3s);
+}
+.nav-item-3 {
+  @include animation(navIcons, 0.4s);
 }
 
 @include media(768px) {

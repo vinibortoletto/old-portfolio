@@ -13,6 +13,10 @@
       background: linear-gradient(to right, $c-purple, $c-teal);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+
+      opacity: 0;
+      transform: translateY(30px);
+      @include animation(secondaryTitle, 0.3s);
     }
   }
 }
@@ -39,22 +43,30 @@
 }
 
 .skills-item {
-  color: $c-white;
+  margin-bottom: $d-mini;
+
   font-family: $ff-primary;
   text-transform: uppercase;
-  margin-bottom: $d-mini;
+  color: $c-white;
+
+  opacity: 0;
+  transform: translateX(-30px);
 }
-.skills-item.first {
+.skills-item-1 {
   font-size: 4rem;
+  @include animation(skills-item, 0.2s);
 }
-.skills-item.second {
+.skills-item-2 {
   font-size: 2.5rem;
+  @include animation(skills-item, 0.3s);
 }
-.skills-item.third {
+.skills-item-3 {
   font-size: 2.5rem;
+  @include animation(skills-item, 0.4s);
 }
-.skills-item.fourth {
+.skills-item-4 {
   font-size: 2rem;
+  @include animation(skills-item, 0.5s);
 }
 
 // Queries
@@ -82,16 +94,16 @@
   .skills-item {
     text-align: right;
   }
-  .skills-item.first {
+  .skills-item-1 {
     font-size: 12vw;
   }
-  .skills-item.second {
+  .skills-item-2 {
     font-size: 7vw;
   }
-  .skills-item.third {
+  .skills-item-3 {
     font-size: 7vw;
   }
-  .skills-item.fourth {
+  .skills-item-4 {
     font-size: 6vw;
   }
 }

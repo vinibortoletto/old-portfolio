@@ -3,3 +3,7 @@
     @content;
   }
 }
+
+@mixin animation($name, $delay) {
+  animation: $name 0.3s ease-out $delay forwards;
+}

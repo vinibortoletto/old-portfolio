@@ -22,7 +22,6 @@ a {
   opacity: 0.2;
 }
 
-
 // Page Title
 .title {
   position: absolute;
@@ -38,9 +37,14 @@ a {
     font-family: $ff-primary;
     font-size: 4.6rem;
     letter-spacing: -1px;
+
     line-height: 0.8;
     text-transform: uppercase;
     color: $c-white;
+
+    opacity: 0;
+    transform: translateY(20px);
+    @include animation(primaryTitle, 0.2s);
   }
 }
 

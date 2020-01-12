@@ -1,23 +1,22 @@
 // Title
-.home {
-  .title {
-    .secondary {
-      width: fit-content;
-      padding: 0 5px;
+.title {
+  .secondary {
+    width: fit-content;
+    padding: 0 5px;
 
-      font-family: $ff-secondary;
-      font-size: $f-md;
+    font-family: $ff-secondary;
+    font-size: $f-md;
 
-      margin: 0 0 $d-mini 0;
+    margin: 0 0 $d-mini 0;
 
-      background: linear-gradient(to right, $c-purple, $c-teal);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
+    background: linear-gradient(to right, $c-purple, $c-teal);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 
-      opacity: 0;
-      transform: translateY(30px);
-      @include animation(secondaryTitle, 0.3s);
-    }
+    opacity: 0;
+    transform: translateY(30px);
+    @include transition(0.2s, 0.1s);
   }
 }
 
@@ -27,7 +26,6 @@
   height: 100%;
 
   position: absolute;
-
   opacity: 0.03;
 
   pointer-events: none;
@@ -54,19 +52,19 @@
 }
 .skills-item-1 {
   font-size: 4rem;
-  @include animation(skills-item, 0.2s);
+  @include transition(0.2s, 0.2s);
 }
 .skills-item-2 {
   font-size: 2.5rem;
-  @include animation(skills-item, 0.3s);
+  @include transition(0.2s, 0.3s);
 }
 .skills-item-3 {
   font-size: 2.5rem;
-  @include animation(skills-item, 0.4s);
+  @include transition(0.2s, 0.4s);
 }
 .skills-item-4 {
   font-size: 2rem;
-  @include animation(skills-item, 0.5s);
+  @include transition(0.2s, 0.5s);
 }
 
 // Queries

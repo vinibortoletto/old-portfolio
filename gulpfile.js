@@ -20,11 +20,6 @@ function scssTask() {
   return src("app/scss/style.scss")
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(
-      purgecss({
-        content: ["*.html"]
-      })
-    )
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write("."))
     .pipe(dest("dist"));

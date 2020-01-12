@@ -17,28 +17,28 @@
       integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/dist/style.css?cb=1578676260049" />
+    <link rel="stylesheet" href="/dist/style.css?cb=1578848341122" />
   </head>
   <body>
     <header>
       <nav class="nav">
         <!-- NAV ITEMS -->
         <ul class="nav-list">
-          <a class="nav-link page-active" href="#home">
+          <a id="home-btn" class="nav-link page-active" href="#home">
             <li class="nav-item nav-item-1">
               <div class="square"></div>
               <i class="icon fas fa-home "> </i>
             </li>
           </a>
 
-          <a class="nav-link" href="#trabalhos">
+          <a id="trabalhos-btn" class="nav-link" href="#trabalhos">
             <li class="nav-item nav-item-2">
               <div class="square"></div>
               <i class="icon fas fa-images"></i>
             </li>
           </a>
 
-          <a class="nav-link" href="#contato">
+          <a id="contato-btn" class="nav-link" href="#contato">
             <li class="nav-item no-margin nav-item-3">
               <div class="square"></div>
               <i class="icon fas fa-comments"></i>
@@ -50,15 +50,20 @@
 
     <main>
       <!-- Background Image -->
-      <div class="bg-img"></div>
+      <div class="bg">
+        <div class="bg-texture"></div>
+        <div class="bg-img"></div>
+      </div>
 
       <!-- Home -->
-      <section class="home">
+      <section class="home" id="home">
         <div class="title">
           <div class="secondary-box">
             <h2 class="secondary">desenvolvedor front-end</h2>
           </div>
-          <h1 class="primary">Vinicius Bortoletto</h1>
+          <h1 id="title-primary" class="primary">
+            vinicius bortoletto
+          </h1>
         </div>
 
         <div class="skills">
@@ -76,9 +81,24 @@
       </section>
 
       <!-- Trabalhos -->
-      <section class="trabalhos"></section>
+      <section class="trabalhos" id="trabalhos">
+        <div class="title">
+          <h1 id="title-primary" class="primary">
+            trabalhos
+          </h1>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section class="contato" id="contato">
+        <div class="title">
+          <h1 id="title-primary" class="primary">
+            contato
+          </h1>
+        </div>
+      </section>
     </main>
 
-    <script src="/dist/script.js?cb=1578676260049"></script>
+    <script src="/dist/script.js?cb=1578848341122"></script>
   </body>
 </html>

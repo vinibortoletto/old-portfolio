@@ -1,0 +1,16 @@
+@import "_background";
+@import "_title";
+
+body {
+  background: $c-black;
+  font-family: $ff-dft;
+}
+
+a {
+  color: $c-white;
+}
+
+::selection {
+  background-color: $c-teal;
+  color: $c-purple;
+}

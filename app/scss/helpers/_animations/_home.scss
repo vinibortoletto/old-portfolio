@@ -1,0 +1,12 @@
+.home-animation {
+  .title {
+    .primary,
+    .secondary {
+      @extend %reset-animation;
+    }
+  }
+
+  .skills-item {
+    @extend %reset-animation;
+  }
+}

@@ -7,7 +7,7 @@
 
   pointer-events: none;
 }
-.primary {
+.title__primary {
   width: fit-content;
 
   font-family: $ff-primary;
@@ -17,6 +17,7 @@
   line-height: 0.8;
   text-transform: uppercase;
   color: $c-white;
+  text-shadow: 0 1px 3px $c-purple;
 
   opacity: 0;
   transform: translateY(20px);
@@ -24,7 +25,7 @@
 }
 
 @include media(680px) {
-  .title .primary {
+  .title__primary {
     font-size: 10vw;
   }
 }

@@ -1,7 +1,7 @@
-@import "./_nav";
+@import "./_components/nav";
 
-@import "./_home";
-@import "./_trabalhos";
-@import "./_contato";
+@import "./_home/home";
+@import "./_trabalhos/trabalhos";
+@import "./_contato/contato";
 
-@import "./_footer";
+@import "./_components/footer";

@@ -7,7 +7,7 @@
     <title>Vinicius Bortoletto | Desenvolvedor Front-End</title>
 
     <link
-      href="https://fonts.googleapis.com/css?family=Anton|Romanesco&display=swap"
+      href="https://fonts.googleapis.com/css?family=Anton|Quicksand|Romanesco&display=swap"
       rel="stylesheet"
     />
 
@@ -17,29 +17,29 @@
       integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/dist/style.css?cb=1578848341122" />
+    <link rel="stylesheet" href="/dist/style.css?cb=1579024586370" />
   </head>
   <body>
     <header>
       <nav class="nav">
         <!-- NAV ITEMS -->
-        <ul class="nav-list">
-          <a id="home-btn" class="nav-link page-active" href="#home">
-            <li class="nav-item nav-item-1">
+        <ul class="nav__list">
+          <a id="home__btn" class="nav__link">
+            <li class="nav__item nav__item--1">
               <div class="square"></div>
               <i class="icon fas fa-home "> </i>
             </li>
           </a>
 
-          <a id="trabalhos-btn" class="nav-link" href="#trabalhos">
-            <li class="nav-item nav-item-2">
+          <a id="trabalhos__btn" class="nav__link">
+            <li class="nav__item nav__item--2">
               <div class="square"></div>
               <i class="icon fas fa-images"></i>
             </li>
           </a>
 
-          <a id="contato-btn" class="nav-link" href="#contato">
-            <li class="nav-item no-margin nav-item-3">
+          <a id="contato__btn" class="nav__link">
+            <li class="nav__item nav__item--3">
               <div class="square"></div>
               <i class="icon fas fa-comments"></i>
             </li>
@@ -49,56 +49,245 @@
     </header>
 
     <main>
-      <!-- Background Image -->
-      <div class="bg">
-        <div class="bg-texture"></div>
-        <div class="bg-img"></div>
-      </div>
+      <!-- Pages Background -->
+      <div class="bg__img"></div>
 
       <!-- Home -->
       <section class="home" id="home">
+        <div class="bg__texture bg__texture--home"></div>
+
         <div class="title">
-          <div class="secondary-box">
-            <h2 class="secondary">desenvolvedor front-end</h2>
+          <div class="title__secondaryBox">
+            <h2 class="title__secondary">desenvolvedor front-end</h2>
           </div>
-          <h1 id="title-primary" class="primary">
+          <h1 id="title__primary" class="title__primary">
             vinicius bortoletto
           </h1>
         </div>
 
         <div class="skills">
-          <ul class="skills-list">
-            <li class="skills-item skills-item-1">html css javascript</li>
-            <li class="skills-item skills-item-2">
+          <ul class="skills__list">
+            <li class="skills__item skills__item--1">html css javascript</li>
+            <li class="skills__item skills__item--2">
               sass tailwind bulma reactjs
             </li>
-            <li class="skills-item skills-item-3">
+            <li class="skills__item skills__item--3">
               visualstudiocode figma
             </li>
-            <li class="skills-item skills-item-4">inglês português</li>
+            <li class="skills__item skills__item--4">inglês português</li>
           </ul>
         </div>
       </section>
 
       <!-- Trabalhos -->
       <section class="trabalhos" id="trabalhos">
-        <div class="title">
-          <h1 id="title-primary" class="primary">
+        <div class="bg__texture bg__texture--trabalhos"></div>
+
+        <div class="title title--trabalhos">
+          <h1 id="title__primary" class="title__primary">
             trabalhos
           </h1>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery__work">
+            <div class="work__imgBox">
+              <figure>
+                <img
+                  class="work__img"
+                  src="/dist/images/trabalhos/trabalhos-1.jpg"
+                  alt="miniatura de projeto thomas anderson"
+                />
+              </figure>
+
+              <div class="work__line work__line--left"></div>
+              <div class="work__line work__line--right"></div>
+            </div>
+
+            <div class="gallery__info">
+              <h1 class="info__title">Thomas Anderson</h1>
+
+              <div class="info__line info__line--top"></div>
+              <div class="info__line info__line--bottom"></div>
+
+              <div class="info__btnBox">
+                <button class="info__btn info__btn--preview">
+                  <i class="info__icon fas fa-expand"></i>
+                </button>
+
+                <button class="info__btn info__btn--tools">
+                  <i class="info__icon fas fa-tools"></i>
+                </button>
+
+                <button class="info__btn info__btn--github">
+                  <i class="info__icon fab fa-github"></i>
+                </button>
+              </div>
+
+              <div id="info__tools--1" class="info__tools">
+                <h1 class="tools__title">Ferramentas usadas:</h1>
+                <button class="tools__close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <ul class="info__list">
+                  <li class="tools__item">
+                    - Figma
+                  </li>
+
+                  <li class="tools__item">
+                    - HTML5
+                  </li>
+
+                  <li class="tools__item">
+                    - TailwindCSS e Vanilla CSS
+                  </li>
+
+                  <li class="tools__item">
+                    - JavaScript
+                  </li>
+
+                  <li class="tools__item">
+                    - ScrollMagic, Parallax.JS e Slick
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__work">
+            <div class="work__imgBox">
+              <figure>
+                <img
+                  class="work__img"
+                  src="/dist/images/trabalhos/trabalhos-2.jpg"
+                  alt="miniatura de projeto vital ajuda"
+                />
+              </figure>
+
+              <div class="work__line work__line--left"></div>
+              <div class="work__line work__line--right"></div>
+            </div>
+
+            <div class="gallery__info">
+              <h1 class="info__title">Vital Ajuda</h1>
+
+              <div class="info__line info__line--top"></div>
+              <div class="info__line info__line--bottom"></div>
+
+              <div class="info__btnBox">
+                <button class="info__btn info__btn--preview">
+                  <i class="info__icon fas fa-expand"></i>
+                </button>
+
+                <button class="info__btn info__btn--tools">
+                  <i class="info__icon fas fa-tools"></i>
+                </button>
+
+                <button class="info__btn info__btn--github">
+                  <i class="info__icon fab fa-github"></i>
+                </button>
+              </div>
+
+              <div id="info__tools--2" class="info__tools">
+                <h1 class="tools__title">Ferramentas usadas:</h1>
+                <button class="tools__close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                  <li class="tools__item">
+                    - Figma
+                  </li>
+
+                  <li class="tools__item">
+                    - HTML5
+                  </li>
+
+                  <li class="tools__item">
+                    - Bulma e SASS
+                  </li>
+
+                  <li class="tools__item">
+                    - JavaScript
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__work">
+            <div class="work__imgBox">
+              <figure>
+                <img
+                  class="work__img"
+                  src="/dist/images/trabalhos/trabalhos-3.jpg"
+                  alt="miniatura de projeto vital ajuda"
+                />
+              </figure>
+
+              <div class="work__line work__line--left"></div>
+              <div class="work__line work__line--right"></div>
+            </div>
+
+            <div class="gallery__info">
+              <h1 class="info__title">Vital Ajuda</h1>
+
+              <div class="info__line info__line--top"></div>
+              <div class="info__line info__line--bottom"></div>
+
+              <div class="info__btnBox">
+                <button class="info__btn info__btn--preview">
+                  <i class="info__icon fas fa-expand"></i>
+                </button>
+
+                <button class="info__btn info__btn--tools">
+                  <i class="info__icon fas fa-tools"></i>
+                </button>
+
+                <button class="info__btn info__btn--github">
+                  <i class="info__icon fab fa-github"></i>
+                </button>
+              </div>
+
+              <div id="info__tools--2" class="info__tools">
+                <h1 class="tools__title">Ferramentas usadas:</h1>
+                <button class="tools__close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                  <li class="tools__item">
+                    - Figma
+                  </li>
+
+                  <li class="tools__item">
+                    - HTML5
+                  </li>
+
+                  <li class="tools__item">
+                    - Bulma e SASS
+                  </li>
+
+                  <li class="tools__item">
+                    - JavaScript
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Contato -->
       <section class="contato" id="contato">
+        <div class="bg__texture bg__texture--contato"></div>
+
         <div class="title">
-          <h1 id="title-primary" class="primary">
+          <h1 id="title__primary" class="title__primary">
             contato
           </h1>
         </div>
       </section>
     </main>
 
-    <script src="/dist/script.js?cb=1578848341122"></script>
+    <script src="/dist/script.js?cb=1579024586370"></script>
   </body>
 </html>

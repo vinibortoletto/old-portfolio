@@ -1,0 +1,96 @@
+.gallery__info {
+  background: $c-white;
+
+  width: 90%;
+  height: 100%;
+  @extend %flex-center;
+  flex-direction: column;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: $c-black;
+
+  opacity: 0;
+  transform: translateX(100%);
+  @include transition(0.3s, 0.1s);
+}
+
+.info {
+  &__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    margin-bottom: $d-sm;
+  }
+
+  &__line {
+    width: 60%;
+    height: 1px;
+
+    &--top {
+      background: linear-gradient(to right, $c-black, transparent);
+      margin-bottom: $d-mini;
+    }
+
+    &--bottom {
+      background: linear-gradient(to left, $c-black, transparent);
+      margin-bottom: $d-sm;
+    }
+  }
+
+  &__btn {
+    margin-right: 1rem;
+
+    &--github {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+}
+
+.info__tools {
+  width: 100%;
+  position: absolute;
+  background: $c-white;
+
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+
+  opacity: 0;
+  z-index: -1;
+
+  @include transition(0.2s, 0s);
+}
+
+.tools {
+  &__title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+  }
+
+  &__item {
+    margin-bottom: 0.5rem;
+  }
+
+  &__close {
+    position: absolute;
+    right: 1rem;
+    top: -15px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+}
+
+// Hover Animations
+.gallery__work:hover {
+  .gallery__info {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

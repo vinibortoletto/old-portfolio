@@ -1,6 +1,13 @@
 .trabalhos-animation {
-  .title .primary {
-    opacity: 1;
-    transform: translateY(0);
+  .bg__texture--trabalhos {
+    @extend %reset-animation;
+  }
+
+  .title__primary {
+    @extend %reset-animation;
+  }
+
+  .gallery {
+    @extend %reset-animation;
   }
 }

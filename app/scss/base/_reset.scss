@@ -453,7 +453,7 @@ html {
 }
 
 body {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 *,
@@ -464,4 +464,15 @@ body {
 
 figure {
   margin: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
 }

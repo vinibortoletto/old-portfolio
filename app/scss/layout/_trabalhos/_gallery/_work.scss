@@ -1,0 +1,51 @@
+.gallery__work {
+  position: relative;
+  box-shadow: 0 1px 3px rgba(#130f25, 1);
+  margin-bottom: $d-md;
+
+  overflow: hidden;
+}
+
+.work {
+  &__img {
+    width: 100%;
+    max-width: 23rem;
+    height: 12rem;
+
+    object-fit: cover;
+
+    filter: saturate(0.5);
+  }
+
+  &__line {
+    width: 2px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+
+    background: $c-white;
+
+    &--right {
+      right: 0;
+      @include transition(0.2s, 0s);
+    }
+
+    &--left {
+      right: 10px;
+      @include transition(0.2s, 0.1s);
+    }
+  }
+}
+
+.gallery__work:hover {
+  .work__line {
+    &--right {
+      right: calc(100% - 2px);
+    }
+
+    &--left {
+      right: 96%;
+    }
+  }
+}

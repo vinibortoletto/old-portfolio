@@ -1,8 +1,3 @@
-%grid-center {
-  display: grid;
-  justify-items: center;
-}
-
 %flex-center {
   display: flex;
   justify-content: center;
@@ -12,10 +7,6 @@
 %absolute {
   position: absolute;
   z-index: -1;
-}
-
-%transition {
-  transition: 0.2s ease-out;
 }
 
 %side-padding {

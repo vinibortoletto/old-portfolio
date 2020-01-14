@@ -1,12 +1,14 @@
 .home-animation {
-  .title {
-    .primary,
-    .secondary {
-      @extend %reset-animation;
-    }
+  .bg__texture--home {
+    @extend %reset-animation;
   }
 
-  .skills-item {
+  .title__primary,
+  .title__secondary {
+    @extend %reset-animation;
+  }
+
+  .skills__item {
     @extend %reset-animation;
   }
 }

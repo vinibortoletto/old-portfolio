@@ -1,5 +1,9 @@
 .contato-animation {
-  .title .primary {
+  .bg__texture--contato {
+    @extend %reset-animation;
+  }
+
+  .title__primary {
     opacity: 1;
     transform: translateY(0);
   }

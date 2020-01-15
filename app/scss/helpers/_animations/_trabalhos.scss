@@ -8,6 +8,11 @@
   }
 
   .gallery {
+    pointer-events: all;
+  }
+
+  .gallery__work {
     @extend %reset-animation;
+    pointer-events: all;
   }
 }

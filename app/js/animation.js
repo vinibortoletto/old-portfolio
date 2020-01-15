@@ -2,6 +2,12 @@ const homeSection = document.getElementById("home");
 const trabalhosSection = document.getElementById("trabalhos");
 const contatoSection = document.getElementById("contato");
 
+const navbar = document.getElementById("nav");
+
+function navbarAnimation() {
+  navbar.classList.add("navbar-animation");
+}
+
 function homeAnimation() {
   trabalhosPage.classList.contains("trabalhos-animation") &&
     trabalhosPage.classList.remove("trabalhos-animation");
@@ -9,14 +15,13 @@ function homeAnimation() {
   contatoPage.classList.contains("contato-animation") &&
     contatoPage.classList.remove("contato-animation");
 
+  // homeSection.style.display = "block";
   setTimeout(() => {
-    // trabalhosSection.style.display = "none";
-    // contatoSection.style.display = "none";
-
-    // homeSection.style.display = "block";
-
     !homePage.classList.contains("home-animation") &&
       homePage.classList.add("home-animation");
+
+    // trabalhosSection.style.display = "none";
+    // contatoSection.style.display = "none";
   }, 400);
 }
 
@@ -27,13 +32,13 @@ function trabalhosAnimation() {
   contatoPage.classList.contains("contato-animation") &&
     contatoPage.classList.remove("contato-animation");
 
+  // trabalhosSection.style.display = "block";
   setTimeout(() => {
-    // homeSection.style.display = "none";
-    // contatoSection.style.display = "none";
-
-    // trabalhosSection.style.display = "block";
     !trabalhosPage.classList.contains("trabalhos-animation") &&
       trabalhosPage.classList.add("trabalhos-animation");
+
+    // homeSection.style.display = "none";
+    // contatoSection.style.display = "none";
   }, 400);
 }
 
@@ -44,12 +49,12 @@ function contatoAnimation() {
   trabalhosPage.classList.contains("trabalhos-animation") &&
     trabalhosPage.classList.remove("trabalhos-animation");
 
+  // contatoSection.style.display = "block";
   setTimeout(() => {
-    // homeSection.style.display = "none";
-    // trabalhosSection.style.display = "none";
-
-    // contatoSection.style.display = "block";
     !contatoPage.classList.contains("contato-animation") &&
       contatoPage.classList.add("contato-animation");
+
+    // homeSection.style.display = "none";
+    // trabalhosSection.style.display = "none";
   }, 400);
 }

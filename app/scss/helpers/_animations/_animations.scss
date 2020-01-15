@@ -7,3 +7,9 @@
     opacity: 1;
   }
 }
+
+.navbar-animation {
+  .nav__item {
+    @extend %reset-animation;
+  }
+}

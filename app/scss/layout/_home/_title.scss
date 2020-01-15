@@ -1,0 +1,42 @@
+// Title
+.title__secondary {
+  width: fit-content;
+  padding: 0 5px;
+
+  font-family: $ff-secondary;
+  font-size: 1.5rem;
+
+  margin: 0 0 $d-mini 0;
+
+  background: linear-gradient(to right, $c-purple, $c-teal);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(30px);
+  @include transition(0.2s, 0.1s);
+}
+
+@include media(546px) {
+  .title__secondaryBox {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .title__secondary {
+    margin-bottom: $d-sm;
+  }
+}
+
+@include media(900px) {
+  .title__secondary {
+    font-size: 2rem;
+  }
+}
+
+@include media(900px) {
+  .title__secondary {
+    font-size: 3rem;
+  }
+}

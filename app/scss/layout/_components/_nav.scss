@@ -17,6 +17,9 @@
   padding: $d-mini;
   position: relative;
 
+  opacity: 0;
+  transform: translateY(-10%);
+
   .icon {
     font-size: 1.5rem;
   }
@@ -33,6 +36,8 @@
     border: 1px solid $c-white;
     border-radius: 5px;
     opacity: 0;
+
+    @include transition(0.1s, 0s);
   }
 
   &:hover .square {
@@ -41,13 +46,13 @@
 }
 
 .nav__item--1 {
-  @include animation(navIcons, 0.2s);
+  @include transition(0.2s, 0.2s);
 }
 .nav__item--2 {
-  @include animation(navIcons, 0.3s);
+  @include transition(0.2s, 0.3s);
 }
 .nav__item--3 {
-  @include animation(navIcons, 0.4s);
+  @include transition(0.2s, 0.4s);
 }
 
 @include media(768px) {

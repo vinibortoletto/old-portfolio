@@ -1,0 +1,41 @@
+.contact {
+  display: grid;
+  row-gap: 1rem;
+  padding: 5.5rem 10vw 0 0;
+
+  &__item {
+    width: 100%;
+
+    position: relative;
+
+    @extend %flex-center;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    width: 7rem;
+    height: 7rem;
+
+    @extend %flex-center;
+    flex-direction: column;
+    margin-left: $d-md;
+
+    border: 1px solid $c-white;
+    border-radius: 100px;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    color: $c-white;
+  }
+
+  &__copied {
+    // display: none;
+    color: $c-white;
+    // position: absolute;
+
+    // top: 50%;
+    // left: 20vw;
+    // transform: translateY(-50%);
+  }
+}

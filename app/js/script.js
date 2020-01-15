@@ -8,23 +8,45 @@ const contatoPage = document.getElementById("contato");
 
 const title = document.getElementById("title__primary");
 
-window.onload = () => {
-  trabalhosPage.classList.add("trabalhos-animation"); //FIXME: remover depois
-  trabalhosBtn.classList.add("page-active");
+let currentPage = "";
 
-  // homePage.classList.add("home-animation");
-  // homeBtn.classList.add("page-active");
+window.onload = () => {
+  navbarAnimation();
+  // currentPage = "home";
+  // homeAnimation();
+  // pageActive(homeBtn);
+
+  currentPage = "contato";
+  contatoAnimation();
+  pageActive(contatoBtn);
+};
+
+window.onresize = () => {
+  toggleOverflow();
 };
 
 homeBtn.addEventListener("click", function() {
+  currentPage = "home";
   homeAnimation();
   pageActive(homeBtn);
+
+  toggleOverflow();
+  scrollTop();
 });
+
 trabalhosBtn.addEventListener("click", function() {
+  currentPage = "trabalhos";
   trabalhosAnimation();
   pageActive(trabalhosBtn);
+  toggleOverflow();
+  scrollTop();
 });
+
 contatoBtn.addEventListener("click", function() {
+  currentPage = "contato";
   contatoAnimation();
   pageActive(contatoBtn);
+
+  toggleOverflow();
+  scrollTop();
 });

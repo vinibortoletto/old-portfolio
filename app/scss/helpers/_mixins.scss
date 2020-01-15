@@ -4,10 +4,6 @@
   }
 }
 
-@mixin animation($name, $delay) {
-  animation: $name 0.3s ease-out $delay forwards;
-}
-
 @mixin transition($duration, $delay) {
   transition: $duration ease-out $delay;
 }

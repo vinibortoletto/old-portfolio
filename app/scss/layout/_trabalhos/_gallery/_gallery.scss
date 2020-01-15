@@ -8,9 +8,21 @@
 
   display: grid;
   justify-items: center;
+  row-gap: 1.5rem;
 
   padding: 5.5rem 5vw 5.5rem 5vw;
+  pointer-events: none;
+}
 
-  opacity: 0;
-  @include transition(0.2s, 0s);
+@include media(850px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+  }
+}
+
+@include media(1024px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

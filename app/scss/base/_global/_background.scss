@@ -1,4 +1,3 @@
-// Page Background
 .bg__img {
   width: 100%;
   height: 100vh;
@@ -8,9 +7,11 @@
   opacity: 0.2;
   background: $c-black url(/dist/images/bg-md.jpg) center / cover;
 }
+
 .bg__texture {
   width: 100%;
   height: 100vh;
+
   position: fixed;
   top: 0;
   z-index: -2;

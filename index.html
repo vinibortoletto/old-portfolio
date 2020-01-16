@@ -17,7 +17,7 @@
       integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/dist/style.css?cb=1579119862013" />
+    <link rel="stylesheet" href="/dist/style.css?cb=1579204500576" />
   </head>
   <body id="body">
     <header>
@@ -462,43 +462,81 @@
           </h1>
         </div>
 
-        <div class="contact">
-          <div class="contact__item">
-            <span class="contact__copied">copiado!</span>
+        <div class="spheres">
+          <div class="spheres__item spheres__item--email">
+            <span id="spheres__copied--email" class="spheres__copied"
+              >copiado!</span
+            >
 
-            <button class="contact__btn">
-              <i class="contact__icon fas fa-envelope"></i>
-            </button>
+            <div class="spheres__btnBox">
+              <div id="spheres__line--email" class="spheres__line"></div>
+              <button id="spheres__btn--email" class="spheres__btn">
+                <i class="spheres__icon fas fa-envelope"></i>
+              </button>
+            </div>
+
+            <input
+              class="hidden-input"
+              id="text-email"
+              type="text"
+              value="ovinibortoletto@gmail.com"
+            />
           </div>
 
-          <div class="contact__item">
-            <span class="contact__copied">copiado!</span>
+          <div class="spheres__item spheres__item--github">
+            <!-- <span class="spheres__copied">copiado!</span> -->
 
-            <button class="contact__btn">
-              <i class="contact__icon fab fa-github"></i>
-            </button>
+            <div class="spheres__btnBox">
+              <div id="spheres__line--github" class="spheres__line"></div>
+              <button id="spheres__btn--github" class="spheres__btn">
+                <a href="https://github.com/ViniBortoletto" target="_blank">
+                  <i class="spheres__icon fab fa-github"></i>
+                </a>
+              </button>
+            </div>
           </div>
 
-          <div class="contact__item">
-            <span class="contact__copied">copiado!</span>
+          <div class="spheres__item spheres__item--phone">
+            <span id="spheres__copied--phone" class="spheres__copied"
+              >copiado!</span
+            >
 
-            <button class="contact__btn">
-              <i class="contact__icon fab fa-whatsapp"></i>
-            </button>
+            <div class="spheres__btnBox">
+              <div id="spheres__line--phone" class="spheres__line"></div>
+              <button id="spheres__btn--phone" class="spheres__btn">
+                <i class="spheres__icon fab fa-whatsapp"></i>
+              </button>
+            </div>
+
+            <input
+              class="hidden-input"
+              id="text-phone"
+              type="text"
+              value="5519988724386"
+            />
           </div>
         </div>
 
-        <!-- <div class="profile">
+        <div class="profile">
           <figure>
             <img
+              srcset="
+                /dist/images/contato/profile-lg.jpg 1024w,
+                /dist/images/contato/profile-md.jpg  768w
+              "
               src="/dist/images/contato/profile-sm.jpg"
-              alt="imagem de um homem de costas"
+              alt="homem de costas"
+              class="profile__img"
             />
           </figure>
+        </div>
+
+        <!-- <div class="profile">
+          <div class="profile__img"></div>
         </div> -->
       </section>
     </main>
 
-    <script src="/dist/script.js?cb=1579119862013"></script>
+    <script src="/dist/script.js?cb=1579204500576"></script>
   </body>
 </html>

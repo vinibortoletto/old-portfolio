@@ -5,21 +5,33 @@
   @extend %flex-center;
   position: fixed;
   z-index: 10;
-}
 
-.nav__list {
-  width: 60%;
-  @extend %flex-center;
-  justify-content: space-between;
+  &__list {
+    width: 60%;
+    @extend %flex-center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: $d-mini;
+    position: relative;
+
+    opacity: 0;
+    transform: translateY(-10%);
+
+    &--1 {
+      @include transition(0.2s, 0.2s);
+    }
+    &--2 {
+      @include transition(0.2s, 0.3s);
+    }
+    &--3 {
+      @include transition(0.2s, 0.4s);
+    }
+  }
 }
 
 .nav__item {
-  padding: $d-mini;
-  position: relative;
-
-  opacity: 0;
-  transform: translateY(-10%);
-
   .icon {
     font-size: 1.5rem;
   }
@@ -45,24 +57,14 @@
   }
 }
 
-.nav__item--1 {
-  @include transition(0.2s, 0.2s);
-}
-.nav__item--2 {
-  @include transition(0.2s, 0.3s);
-}
-.nav__item--3 {
-  @include transition(0.2s, 0.4s);
-}
-
 @include media(768px) {
   .nav {
     justify-content: flex-end;
     padding: 0 5vw;
-  }
 
-  .nav__list {
-    width: 40%;
+    &__list {
+      width: 40%;
+    }
   }
 }
 

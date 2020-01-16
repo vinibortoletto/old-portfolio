@@ -1,4 +1,5 @@
 .bg__texture--trabalhos {
+  opacity: 0;
   background: linear-gradient(
       200deg,
       rgba(171, 171, 171, 0.05) 0%,
@@ -33,6 +34,4 @@
       rgba(144, 144, 144, 0.05) 100%
     ),
     linear-gradient(329deg, hsl(148, 0%, 0%), hsl(148, 0%, 0%));
-
-  opacity: 0;
 }

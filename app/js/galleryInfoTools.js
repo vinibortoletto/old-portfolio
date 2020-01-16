@@ -1,7 +1,5 @@
-// const infoTools1 = document.getElementById("info__tools--1");
 const infoToolsBtn = document.querySelectorAll(".info__btn--tools");
 const infoToolsCloseBtn = document.querySelectorAll(".tools__close");
-
 const infoToolsContent = document.querySelectorAll(".info__tools");
 
 const galleryWork = document.querySelectorAll(".gallery__work");

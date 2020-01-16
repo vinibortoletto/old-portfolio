@@ -1,7 +1,7 @@
-.contact {
+.spheres {
   display: grid;
   row-gap: 1rem;
-  padding: 5.5rem 10vw 0 0;
+  padding: 7rem 10vw 0 0;
 
   &__item {
     width: 100%;
@@ -10,18 +10,57 @@
 
     @extend %flex-center;
     justify-content: flex-end;
+
+    opacity: 0;
+    transform: translateX(-10%);
+    pointer-events: none;
+
+    &--email {
+      @include transition(0.2s, 0s);
+    }
+    &--github {
+      @include transition(0.2s, 0.1s);
+    }
+    &--phone {
+      @include transition(0.2s, 0.2s);
+    }
+  }
+
+  &__btnBox {
+    width: 7rem;
+    height: 7rem;
+
+    @extend %flex-center;
+    margin-left: $d-md;
+  }
+
+  &__line {
+    width: 7rem;
+    height: 7rem;
+
+    position: absolute;
+
+    border: 1px solid rgba($c-white, 0.5);
+    border-radius: 100%;
+
+    @include transition(0.5s, 0s);
   }
 
   &__btn {
     width: 7rem;
     height: 7rem;
 
-    @extend %flex-center;
-    flex-direction: column;
-    margin-left: $d-md;
+    position: absolute;
 
     border: 1px solid $c-white;
-    border-radius: 100px;
+    border-radius: 100%;
+
+    @include transition(0.3s, 0s);
+
+    &:hover {
+      width: 8rem;
+      height: 8rem;
+    }
   }
 
   &__icon {
@@ -30,12 +69,94 @@
   }
 
   &__copied {
-    // display: none;
     color: $c-white;
-    // position: absolute;
+    font-weight: bold;
+    font-style: italic;
 
-    // top: 50%;
-    // left: 20vw;
-    // transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+
+    @include transition(0.2s, 0s);
   }
+}
+
+@include media(700px) {
+  .spheres {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0;
+    columns: 2rem;
+    justify-items: center;
+
+    padding: 10rem 10vw 0 10vw;
+
+    &__item {
+      justify-content: center;
+    }
+
+    &__btnBox {
+      margin-left: 0;
+    }
+
+    &__btnBox,
+    &__btn,
+    &__line {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    &__btn:hover {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    &__icon {
+      font-size: 6rem;
+    }
+
+    &__copied {
+      position: absolute;
+      left: 50%;
+      bottom: 1.5rem;
+
+      font-size: 0.8rem;
+
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@include media(950px) {
+  .spheres {
+    &__btnBox,
+    &__btn,
+    &__line {
+      width: 14rem;
+      height: 14rem;
+    }
+
+    &__btn:hover {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    &__icon {
+      font-size: 8rem;
+    }
+  }
+}
+
+.sphere-clicked {
+  width: 30rem;
+  height: 30rem;
+  opacity: 0;
+  border-width: 5px;
+}
+
+.copied-msg {
+  opacity: 1;
+}
+
+.hidden-input {
+  position: absolute;
+  left: -200vw;
 }

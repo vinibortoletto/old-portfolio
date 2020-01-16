@@ -1,0 +1,15 @@
+.profile {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  margin-left: 10vw;
+
+  @include transition(0.2s, 0s);
+
+  &__img {
+    width: 40vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}

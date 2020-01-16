@@ -1,4 +1,3 @@
-// Title
 .title__secondary {
   width: fit-content;
   padding: 0 5px;
@@ -20,12 +19,14 @@
 }
 
 @include media(546px) {
-  .title__secondaryBox {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .title__secondary {
-    margin-bottom: $d-sm;
+  .title {
+    &__secondaryBox {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__secondary {
+      margin-bottom: $d-sm;
+    }
   }
 }
 

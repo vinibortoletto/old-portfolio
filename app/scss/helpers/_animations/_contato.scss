@@ -4,7 +4,15 @@
   }
 
   .title__primary {
-    opacity: 1;
-    transform: translateY(0);
+    @extend %reset-animation;
+  }
+
+  .spheres__item {
+    @extend %reset-animation;
+    pointer-events: all;
+  }
+
+  .profile {
+    opacity: 0.7;
   }
 }

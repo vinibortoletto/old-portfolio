@@ -15,13 +15,9 @@ function homeAnimation() {
   contatoPage.classList.contains("contato-animation") &&
     contatoPage.classList.remove("contato-animation");
 
-  // homeSection.style.display = "block";
   setTimeout(() => {
     !homePage.classList.contains("home-animation") &&
       homePage.classList.add("home-animation");
-
-    // trabalhosSection.style.display = "none";
-    // contatoSection.style.display = "none";
   }, 400);
 }
 
@@ -32,13 +28,9 @@ function trabalhosAnimation() {
   contatoPage.classList.contains("contato-animation") &&
     contatoPage.classList.remove("contato-animation");
 
-  // trabalhosSection.style.display = "block";
   setTimeout(() => {
     !trabalhosPage.classList.contains("trabalhos-animation") &&
       trabalhosPage.classList.add("trabalhos-animation");
-
-    // homeSection.style.display = "none";
-    // contatoSection.style.display = "none";
   }, 400);
 }
 
@@ -49,12 +41,8 @@ function contatoAnimation() {
   trabalhosPage.classList.contains("trabalhos-animation") &&
     trabalhosPage.classList.remove("trabalhos-animation");
 
-  // contatoSection.style.display = "block";
   setTimeout(() => {
     !contatoPage.classList.contains("contato-animation") &&
       contatoPage.classList.add("contato-animation");
-
-    // homeSection.style.display = "none";
-    // trabalhosSection.style.display = "none";
   }, 400);
 }

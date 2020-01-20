@@ -1,19 +1,19 @@
 // Initialize modules
 const { src, dest, watch, series, parallel } = require("gulp");
 
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
-const concat = require("gulp-concat");
-const postcss = require("gulp-postcss");
-const replace = require("gulp-replace");
-// const less = require("gulp-less");
+const browserSync = require("browser-sync").create();
 
 const sass = require("gulp-sass");
-
-const purgecss = require("gulp-purgecss");
 const sourcemaps = require("gulp-sourcemaps");
 
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+
+const concat = require("gulp-concat");
 const terser = require("gulp-terser");
+
+const replace = require("gulp-replace");
 
 // SCSS task
 function scssTask() {
@@ -22,7 +22,8 @@ function scssTask() {
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write("."))
-    .pipe(dest("dist"));
+    .pipe(dest("dist"))
+    .pipe(browserSync.stream());
 }
 
 // JS task
@@ -35,20 +36,28 @@ function jsTask() {
         mangle: false
       })
     )
-    .pipe(dest("dist"));
+    .pipe(dest("dist"))
+    .pipe(browserSync.stream());
 }
 
 // Cachebusting task
 const cbString = new Date().getTime();
 function cacheBustTask() {
-  return src(["*.html"])
+  return src(["/dist/*.html"])
     .pipe(replace(/cb=\d+/g, "cb=" + cbString))
     .pipe(dest("."));
 }
 
 // Watch task
 function watchTask() {
+  browserSync.init({
+    server: {
+      baseDir: "./dist"
+    }
+  });
+
   watch(["app/scss/**/*.scss", "app/js/**/*.js"], parallel(scssTask, jsTask));
+  watch("./dist/*.html").on("change", browserSync.reload);
 }
 
 // Deafult task

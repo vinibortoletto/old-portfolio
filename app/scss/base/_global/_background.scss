@@ -5,7 +5,7 @@
   position: fixed;
 
   opacity: 0.2;
-  background: $c-black url(/dist/images/bg-md.jpg) center / cover;
+  background: $c-black url(./images/bg-md.jpg) center / cover;
 }
 
 .bg__texture {
@@ -21,6 +21,6 @@
 
 @include media(1024px) {
   .bg__img {
-    background: $c-black url(/dist/images/bg-lg.jpg) center / cover;
+    background: $c-black url(./images/bg-lg.jpg) center / cover;
   }
 }

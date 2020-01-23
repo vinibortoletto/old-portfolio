@@ -10,5 +10,6 @@
 
   .skills__item {
     @extend %reset-animation;
+    opacity: 0.03;
   }
 }

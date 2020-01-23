@@ -1,14 +1,13 @@
 .title {
   position: absolute;
   bottom: 0;
-  left: -2px;
   z-index: 10;
 
   pointer-events: none;
 }
 
 .title__primary {
-  width: fit-content;
+  // width: fit-content;
 
   font-family: $ff-primary;
   font-size: 4.6rem;

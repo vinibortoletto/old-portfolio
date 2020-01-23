@@ -2,7 +2,7 @@ const emailBtn = document.getElementById("spheres__btn--email");
 const githubBtn = document.getElementById("spheres__btn--github");
 const phoneBtn = document.getElementById("spheres__btn--phone");
 
-emailBtn.addEventListener("click", function() {
+emailBtn.addEventListener("click", function () {
   const emailLine = document.getElementById("spheres__line--email");
 
   emailBtn.style.pointerEvents = "none";
@@ -20,7 +20,7 @@ emailBtn.addEventListener("click", function() {
   }, 400);
 });
 
-githubBtn.addEventListener("click", function() {
+githubBtn.addEventListener("click", function () {
   const githubLine = document.getElementById("spheres__line--github");
 
   githubLine.classList.add("sphere-clicked");
@@ -35,7 +35,7 @@ githubBtn.addEventListener("click", function() {
   }, 400);
 });
 
-phoneBtn.addEventListener("click", function() {
+phoneBtn.addEventListener("click", function () {
   const phoneLine = document.getElementById("spheres__line--phone");
 
   phoneBtn.style.pointerEvents = "none";

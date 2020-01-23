@@ -12,16 +12,21 @@ let currentPage = "";
 
 window.onload = () => {
   navbarAnimation();
-  currentPage = "home";
-  homeAnimation();
-  pageActive(homeBtn);
+
+  // currentPage = "home";
+  // homeAnimation();
+  // pageActive(homeBtn);
+
+  currentPage = "contato";
+  contatoAnimation();
+  pageActive(contatoBtn);
 };
 
 window.onresize = () => {
   toggleOverflow();
 };
 
-homeBtn.addEventListener("click", function() {
+homeBtn.addEventListener("click", function () {
   currentPage = "home";
   homeAnimation();
   pageActive(homeBtn);
@@ -30,7 +35,7 @@ homeBtn.addEventListener("click", function() {
   scrollTop();
 });
 
-trabalhosBtn.addEventListener("click", function() {
+trabalhosBtn.addEventListener("click", function () {
   currentPage = "trabalhos";
   trabalhosAnimation();
   pageActive(trabalhosBtn);
@@ -38,7 +43,7 @@ trabalhosBtn.addEventListener("click", function() {
   scrollTop();
 });
 
-contatoBtn.addEventListener("click", function() {
+contatoBtn.addEventListener("click", function () {
   currentPage = "contato";
   contatoAnimation();
   pageActive(contatoBtn);

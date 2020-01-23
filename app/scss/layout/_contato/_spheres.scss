@@ -91,7 +91,7 @@
   .spheres {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 0;
+    // row-gap: 0;
     columns: 2rem;
     justify-items: center;
 
@@ -125,8 +125,7 @@
     &__copied {
       position: absolute;
       left: 50%;
-      bottom: 1.5rem;
-
+      margin-top: 7rem;
       font-size: 0.8rem;
 
       transform: translateX(-50%);
@@ -151,6 +150,10 @@
 
     &__icon {
       font-size: 8rem;
+    }
+
+    &__copied {
+      margin-top: 9rem;
     }
   }
 }

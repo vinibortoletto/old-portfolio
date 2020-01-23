@@ -13,13 +13,9 @@ let currentPage = "";
 window.onload = () => {
   navbarAnimation();
 
-  // currentPage = "home";
-  // homeAnimation();
-  // pageActive(homeBtn);
-
-  currentPage = "contato";
-  contatoAnimation();
-  pageActive(contatoBtn);
+  currentPage = "home";
+  homeAnimation();
+  pageActive(homeBtn);
 };
 
 window.onresize = () => {

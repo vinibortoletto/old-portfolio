@@ -33,7 +33,7 @@ function jsTask() {
     .pipe(
       terser({
         keep_fnames: true,
-        mangle: false
+        mangle: false,
       })
     )
     .pipe(dest("dist"))
@@ -52,8 +52,8 @@ function cacheBustTask() {
 function watchTask() {
   browserSync.init({
     server: {
-      baseDir: "./dist"
-    }
+      baseDir: "./dist",
+    },
   });
 
   watch(["app/scss/**/*.scss", "app/js/**/*.js"], parallel(scssTask, jsTask));
@@ -62,3 +62,6 @@ function watchTask() {
 
 // Deafult task
 exports.default = series(parallel(scssTask, jsTask), cacheBustTask, watchTask);
+
+var ghpages = require("gh-pages");
+ghpages.publish("./dist", callback);
